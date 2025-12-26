@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Távares e Silva | Armazém de Construções</title>
+
+<link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2942/2942625.png">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    color:#333;
+}
+
+/* HEADER */
+header{
+    background:#1f2933;
+    color:#fff;
+    padding:20px;
+}
+
+.header-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    font-size:26px;
+}
+
+nav a{
+    color:#fff;
+    margin-left:20px;
+    text-decoration:none;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#fbbf24;
+}
+
+/* HERO */
+.hero{
+    background:url("https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc") center/cover no-repeat;
+    height:80vh;
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+    background:rgba(0,0,0,0.65);
+    padding:40px;
+    margin-left:10%;
+    color:#fff;
+    border-radius:10px;
+}
+
+.hero h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.btn{
+    background:#fbbf24;
+    color:#000;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:#f59e0b;
+}
+
+/* SECTIONS */
+section{
+    padding:60px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h3{
+    font-size:32px;
+}
+
+/* PRODUTOS */
+.produtos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:25px;
+}
+
+.produto{
+    background:#fff;
+    border-radius:10px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.produto:hover{
+    transform:translateY(-6px);
+}
+
+.produto img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.produto h4{
+    margin:15px 0;
+}
+
+/* SERVIÇOS */
+.servicos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:25px;
+}
+
+.servico{
+    background:#1f2933;
+    color:#fff;
+    padding:30px;
+    border-radius:10px;
+}
+
+.servico h4{
+    color:#fbbf24;
+    margin-bottom:10px;
+}
+
+/* SOBRE */
+.sobre{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.sobre img{
+    width:100%;
+    border-radius:10px;
+}
+
+@media(max-width:768px){
+    .sobre{
+        grid-template-columns:1fr;
+    }
+}
+
+/* CONTATO */
+.contato{
+    background:#1f2933;
+    color:#fff;
+}
+
+.contato-info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:25px;
+}
+
+.contato-box{
+    background:#111827;
+    padding:25px;
+    border-radius:10px;
+}
+
+/* FOOTER */
+footer{
+    background:#000;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25d366;
+    color:#fff;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-container">
+        <h1>🏗️ Távares e Silva</h1>
+        <nav>
+            <a href="#produtos">Produtos</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>Távares e Silva</h2>
+        <p>Armazém de Construções com qualidade, confiança e preço justo.</p>
+        <a href="#produtos" class="btn">Conheça nossos produtos</a>
+    </div>
+</section>
+
+<section id="produtos">
+    <div class="container">
+        <div class="section-title">
+            <h3>Produtos</h3>
+        </div>
+
+        <div class="produtos">
+            <div class="produto">
+                <img src="https://images.unsplash.com/photo-1581091215367-59ab6cdb9a89">
+                <h4>Cimento e Argamassa</h4>
+                <p>Trabalhamos com as melhores marcas.</p>
+            </div>
+
+            <div class="produto">
+                <img src="https://images.unsplash.com/photo-1601972599720-36938d4ecd31">
+                <h4>Areia e Brita</h4>
+                <p>Material selecionado para sua obra.</p>
+            </div>
+
+            <div class="produto">
+                <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df">
+                <h4>Ferramentas</h4>
+                <p>Linhas profissionais e domésticas.</p>
+            </div>
+
+            <div class="produto">
+                <img src="https://images.unsplash.com/photo-1596495578064-5c5d4d2b6c6f">
+                <h4>Tintas e Acabamentos</h4>
+                <p>Variedade de cores e marcas.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="servicos">
+    <div class="container">
+        <div class="section-title">
+            <h3>Serviços</h3>
+        </div>
+
+        <div class="servicos">
+            <div class="servico">
+                <h4>Entrega Rápida</h4>
+                <p>Entregamos direto na sua obra.</p>
+            </div>
+
+            <div class="servico">
+                <h4>Orçamento na Medida</h4>
+                <p>Atendimento personalizado.</p>
+            </div>
+
+            <div class="servico">
+                <h4>Atendimento Especializado</h4>
+                <p>Equipe pronta para ajudar.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="sobre">
+    <div class="container sobre">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+        <div>
+            <h3>Sobre a Távares e Silva</h3>
+            <p>Somos um armazém de construções comprometido em oferecer materiais de qualidade, bom atendimento e soluções completas para sua obra do início ao fim.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contato" class="contato">
+    <div class="container">
+        <div class="section-title">
+            <h3>Contato</h3>
+        </div>
+
+        <div class="contato-info">
+            <div class="contato-box">
+                <h4>📍 Endereço</h4>
+                <p>Rua Exemplo, nº 123 - Centro</p>
+            </div>
+
+            <div class="contato-box">
+                <h4>📞 Telefone</h4>
+                <p>(81) 99999-9999</p>
+            </div>
+
+            <div class="contato-box">
+                <h4>⏰ Horário</h4>
+                <p>Seg a Sáb - 08h às 18h</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Távares e Silva - Todos os direitos reservados</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5581999999999" target="_blank">💬</a>
+
+</body>
+</html>
