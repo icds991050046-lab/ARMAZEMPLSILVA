@@ -3,16 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Távares e Silva | Armazém de Construções</title>
-
-<link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2942/2942625.png">
+<title>PL Silva Comércio | Armazém e Variedades</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI', sans-serif;
+    font-family:'Segoe UI', Arial, sans-serif;
 }
 
 body{
@@ -20,205 +18,243 @@ body{
     color:#333;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 header{
-    background:#1f2933;
-    color:#fff;
-    padding:20px;
-}
-
-.header-container{
-    max-width:1200px;
-    margin:auto;
+    background:#ffeb00;
+    padding:15px 5%;
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
 }
 
-header h1{
-    font-size:26px;
-}
+header img{ height:70px; }
 
 nav a{
-    color:#fff;
     margin-left:20px;
     text-decoration:none;
-    font-weight:500;
+    font-weight:600;
+    color:#000;
+    transition:.3s;
 }
+nav a:hover{ color:#005f9e; }
 
-nav a:hover{
-    color:#fbbf24;
-}
-
-/* HERO */
+/* ===== HERO ===== */
 .hero{
-    background:url("https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc") center/cover no-repeat;
-    height:80vh;
-    display:flex;
-    align-items:center;
-}
-
-.hero-content{
-    background:rgba(0,0,0,0.65);
-    padding:40px;
-    margin-left:10%;
+    background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
+    background-size:cover;
+    background-position:center;
     color:#fff;
-    border-radius:10px;
+    padding:120px 5%;
+    text-align:center;
 }
 
-.hero h2{
-    font-size:40px;
-    margin-bottom:15px;
+.hero h1{
+    font-size:3.2rem;
+    margin-bottom:20px;
 }
 
 .hero p{
-    font-size:18px;
-    margin-bottom:25px;
+    font-size:1.3rem;
+    margin-bottom:35px;
 }
 
-.btn{
-    background:#fbbf24;
+/* BOTÃO PRINCIPAL */
+.btn-principal{
+    background:#ffeb00;
     color:#000;
-    padding:12px 25px;
+    padding:18px 40px;
     text-decoration:none;
-    border-radius:6px;
     font-weight:bold;
+    border-radius:40px;
+    display:inline-block;
+    transition:.3s;
+    box-shadow:0 8px 25px rgba(0,0,0,.4);
+}
+.btn-principal:hover{
+    background:#ffd500;
+    transform:translateY(-5px) scale(1.05);
 }
 
-.btn:hover{
-    background:#f59e0b;
-}
+/* ===== SECTIONS ===== */
+section{ padding:75px 5%; }
 
-/* SECTIONS */
-section{
-    padding:60px 20px;
-}
-
-.container{
-    max-width:1200px;
-    margin:auto;
-}
-
-.section-title{
+section h2{
     text-align:center;
-    margin-bottom:40px;
+    margin-bottom:45px;
+    font-size:2.4rem;
+    color:#005f9e;
 }
 
-.section-title h3{
-    font-size:32px;
-}
-
-/* PRODUTOS */
-.produtos{
+/* ===== SERVICES ===== */
+.services{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit, minmax(230px,1fr));
     gap:25px;
 }
 
-.produto{
+.service-box{
     background:#fff;
-    border-radius:10px;
-    padding:20px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-
-.produto:hover{
-    transform:translateY(-6px);
-}
-
-.produto img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    border-radius:8px;
-}
-
-.produto h4{
-    margin:15px 0;
-}
-
-/* SERVIÇOS */
-.servicos{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
-    gap:25px;
-}
-
-.servico{
-    background:#1f2933;
-    color:#fff;
     padding:30px;
-    border-radius:10px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 6px 18px rgba(0,0,0,.15);
+    transition:.3s;
+}
+.service-box:hover{
+    transform:translateY(-10px);
 }
 
-.servico h4{
-    color:#fbbf24;
+/* ===== AVALIAÇÕES GOOGLE ===== */
+.google-reviews{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    max-width:1100px;
+    margin:0 auto;
+}
+
+.google-card{
+    background:#fff;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 6px 20px rgba(0,0,0,.15);
+    transition:.3s;
+}
+.google-card:hover{
+    transform:translateY(-8px);
+}
+
+.google-top{
+    display:flex;
+    align-items:center;
     margin-bottom:10px;
 }
 
-/* SOBRE */
-.sobre{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
+.google-avatar{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:#005f9e;
+    color:#fff;
+    display:flex;
     align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    margin-right:12px;
 }
 
-.sobre img{
-    width:100%;
-    border-radius:10px;
+.google-name{
+    font-weight:600;
 }
 
-@media(max-width:768px){
-    .sobre{
-        grid-template-columns:1fr;
-    }
+.google-stars{
+    color:#fbbc04;
+    font-size:1.1rem;
 }
 
-/* CONTATO */
-.contato{
-    background:#1f2933;
+.google-date{
+    font-size:.85rem;
+    color:#777;
+}
+
+.google-text{
+    margin-top:10px;
+    font-size:1rem;
+}
+
+/* ===== MAPA ===== */
+.map-container{
+    max-width:1100px;
+    margin:0 auto;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+/* ===== CONTACT ===== */
+.contact{
+    background:#005f9e;
+    color:#fff;
+    text-align:center;
+}
+
+/* 🎯 COR EXCLUSIVA DO TÍTULO CONTATO */
+.contact h2{
+    color:#ffeb00;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    max-width:1000px;
+    margin:40px auto;
+}
+
+.contact-card{
+    background:#fff;
+    color:#000;
+    padding:30px 20px;
+    border-radius:18px;
+    text-decoration:none;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+    transition:.3s;
+}
+
+.contact-card span{
+    font-size:2.2rem;
+}
+
+.contact-card h3{
+    margin:12px 0 5px;
+}
+
+.contact-card small{
+    color:#555;
+}
+
+.contact-card:hover{
+    transform:translateY(-10px);
+}
+
+.whatsapp-card{
+    background:#25d366;
     color:#fff;
 }
 
-.contato-info{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-    gap:25px;
+.instagram-card{
+    background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af);
+    color:#fff;
 }
 
-.contato-box{
-    background:#111827;
-    padding:25px;
-    border-radius:10px;
-}
-
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer{
     background:#000;
     color:#fff;
     text-align:center;
-    padding:20px;
+    padding:22px;
 }
 
-/* WHATSAPP */
+/* ===== WHATSAPP FLOAT ===== */
 .whatsapp{
     position:fixed;
     bottom:20px;
     right:20px;
     background:#25d366;
     color:#fff;
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:30px;
+    padding:15px 20px;
+    border-radius:50px;
     text-decoration:none;
-    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    font-weight:bold;
+    box-shadow:0 6px 18px rgba(0,0,0,.4);
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.08);}
+    100%{transform:scale(1);}
 }
 </style>
 </head>
@@ -226,124 +262,125 @@ footer{
 <body>
 
 <header>
-    <div class="header-container">
-        <h1>🏗️ Távares e Silva</h1>
-        <nav>
-            <a href="#produtos">Produtos</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato">Contato</a>
-        </nav>
-    </div>
+    <img src="logo.png" alt="PL Silva Comércio">
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Produtos</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#mapa">Localização</a>
+        <a href="#contato">Contato</a>
+    </nav>
 </header>
 
-<section class="hero">
-    <div class="hero-content">
-        <h2>Távares e Silva</h2>
-        <p>Armazém de Construções com qualidade, confiança e preço justo.</p>
-        <a href="#produtos" class="btn">Conheça nossos produtos</a>
-    </div>
-</section>
-
-<section id="produtos">
-    <div class="container">
-        <div class="section-title">
-            <h3>Produtos</h3>
-        </div>
-
-        <div class="produtos">
-            <div class="produto">
-                <img src="https://images.unsplash.com/photo-1581091215367-59ab6cdb9a89">
-                <h4>Cimento e Argamassa</h4>
-                <p>Trabalhamos com as melhores marcas.</p>
-            </div>
-
-            <div class="produto">
-                <img src="https://images.unsplash.com/photo-1601972599720-36938d4ecd31">
-                <h4>Areia e Brita</h4>
-                <p>Material selecionado para sua obra.</p>
-            </div>
-
-            <div class="produto">
-                <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df">
-                <h4>Ferramentas</h4>
-                <p>Linhas profissionais e domésticas.</p>
-            </div>
-
-            <div class="produto">
-                <img src="https://images.unsplash.com/photo-1596495578064-5c5d4d2b6c6f">
-                <h4>Tintas e Acabamentos</h4>
-                <p>Variedade de cores e marcas.</p>
-            </div>
-        </div>
-    </div>
+<section class="hero" id="inicio">
+    <h1>PL Silva Comércio</h1>
+    <p>Seu armazém completo para construção, manutenção e utilidades</p>
+    <a href="https://wa.me/5581991014860" target="_blank" class="btn-principal">
+        Solicitar Orçamento no WhatsApp
+    </a>
 </section>
 
 <section id="servicos">
-    <div class="container">
-        <div class="section-title">
-            <h3>Serviços</h3>
+    <h2>O Que Trabalhamos</h2>
+    <div class="services">
+        <div class="service-box">🧱 <h3>Materiais de Construção</h3></div>
+        <div class="service-box">🔧 <h3>Ferramentas</h3></div>
+        <div class="service-box">💡 <h3>Elétrica & Hidráulica</h3></div>
+        <div class="service-box">🏠 <h3>Variedades</h3></div>
+    </div>
+</section>
+
+<section id="avaliacoes">
+    <h2>Avaliações dos Clientes</h2>
+
+    <div class="google-reviews">
+        <div class="google-card">
+            <div class="google-top">
+                <div class="google-avatar">J</div>
+                <div>
+                    <div class="google-name">João Silva</div>
+                    <div class="google-date">há 2 semanas</div>
+                </div>
+            </div>
+            <div class="google-stars">★★★★★</div>
+            <div class="google-text">Atendimento excelente, loja muito completa.</div>
         </div>
 
-        <div class="servicos">
-            <div class="servico">
-                <h4>Entrega Rápida</h4>
-                <p>Entregamos direto na sua obra.</p>
+        <div class="google-card">
+            <div class="google-top">
+                <div class="google-avatar">M</div>
+                <div>
+                    <div class="google-name">Maria Oliveira</div>
+                    <div class="google-date">há 1 mês</div>
+                </div>
             </div>
+            <div class="google-stars">★★★★★</div>
+            <div class="google-text">Preço justo e entrega rápida. Recomendo.</div>
+        </div>
 
-            <div class="servico">
-                <h4>Orçamento na Medida</h4>
-                <p>Atendimento personalizado.</p>
+        <div class="google-card">
+            <div class="google-top">
+                <div class="google-avatar">C</div>
+                <div>
+                    <div class="google-name">Carlos Santos</div>
+                    <div class="google-date">há 3 meses</div>
+                </div>
             </div>
-
-            <div class="servico">
-                <h4>Atendimento Especializado</h4>
-                <p>Equipe pronta para ajudar.</p>
-            </div>
+            <div class="google-stars">★★★★★</div>
+            <div class="google-text">Sempre encontro tudo para obra.</div>
         </div>
     </div>
 </section>
 
-<section id="sobre">
-    <div class="container sobre">
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
-        <div>
-            <h3>Sobre a Távares e Silva</h3>
-            <p>Somos um armazém de construções comprometido em oferecer materiais de qualidade, bom atendimento e soluções completas para sua obra do início ao fim.</p>
-        </div>
+<section id="mapa">
+    <h2>Onde Estamos</h2>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps?q=-8.063355,-34.871146&z=16&output=embed"
+        width="100%" height="400" style="border:0;" loading="lazy"></iframe>
     </div>
 </section>
 
-<section id="contato" class="contato">
-    <div class="container">
-        <div class="section-title">
-            <h3>Contato</h3>
-        </div>
+<section class="contact" id="contato">
+    <h2>Fale Conosco</h2>
 
-        <div class="contato-info">
-            <div class="contato-box">
-                <h4>📍 Endereço</h4>
-                <p>Rua Exemplo, nº 123 - Centro</p>
-            </div>
+    <div class="contact-grid">
+        <a href="https://wa.me/5581991014860" target="_blank" class="contact-card whatsapp-card">
+            <span>💬</span>
+            <h3>WhatsApp</h3>
+            <p>(81) 99101-4860</p>
+            <small>Clique para conversar</small>
+        </a>
 
-            <div class="contato-box">
-                <h4>📞 Telefone</h4>
-                <p>(81) 99999-9999</p>
-            </div>
+        <a href="tel:+5581991014860" class="contact-card">
+            <span>📞</span>
+            <h3>Telefone</h3>
+            <p>(81) 99101-4860</p>
+            <small>Ligue agora</small>
+        </a>
 
-            <div class="contato-box">
-                <h4>⏰ Horário</h4>
-                <p>Seg a Sáb - 08h às 18h</p>
-            </div>
+        <a href="#" class="contact-card instagram-card">
+            <span>📷</span>
+            <h3>Instagram</h3>
+            <p>@plsilvacomercio</p>
+            <small>Siga a loja</small>
+        </a>
+
+        <div class="contact-card">
+            <span>⏰</span>
+            <h3>Horário</h3>
+            <p>Dom a Sab: 8h às 18h</p>
+            <small>Dom: 8h às 12h</small>
         </div>
     </div>
 </section>
 
 <footer>
-    <p>© 2025 Távares e Silva - Todos os direitos reservados</p>
+    <p>© 2025 PL Silva Comércio - Tudo para sua obra, em um só lugar.</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/5581999999999" target="_blank">💬</a>
+<a class="whatsapp" href="https://wa.me/5581991014860" target="_blank">
+    💬 WhatsApp
+</a>
 
 </body>
 </html>
